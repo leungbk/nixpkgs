@@ -1,5 +1,6 @@
 { lib, external, pkgs }: self: with self; with lib.licenses; {
 
+  apheleia = callPackage ./apheleia { };
   elisp-ffi = melpaBuild rec {
     pname = "elisp-ffi";
     version = "1.0.0";
