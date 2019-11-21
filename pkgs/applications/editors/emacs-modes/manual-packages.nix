@@ -107,6 +107,8 @@
 
   isearch-plus = callPackage ./isearch-plus { };
 
+  isearch-prop = callPackage ./isearch-prop { };
+
   lib-requires =
     callPackage ./lib-requires { };
 
