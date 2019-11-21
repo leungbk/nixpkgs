@@ -105,6 +105,8 @@
 
   icicles = callPackage ./icicles { };
 
+  isearch-plus = callPackage ./isearch-plus { };
+
   lib-requires =
     callPackage ./lib-requires { };
 
