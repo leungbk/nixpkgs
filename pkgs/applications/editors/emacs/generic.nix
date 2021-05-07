@@ -175,7 +175,7 @@ let emacs = stdenv.mkDerivation (lib.optionalAttrs nativeComp {
           (comp-trampoline-compile (intern (pop argv))))"
     mkdir -p $out/share/emacs/native-lisp
     $out/bin/emacs --batch \
-      --eval "(add-to-list 'comp-eln-load-path \"$out/share/emacs/native-lisp\")" \
+      --eval "(add-to-list 'native-comp-eln-load-path \"$out/share/emacs/native-lisp\")" \
       -f batch-native-compile $out/share/emacs/site-lisp/site-start.el
   '';
 
