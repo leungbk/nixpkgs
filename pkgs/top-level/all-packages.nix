@@ -19646,6 +19646,8 @@ with pkgs;
 
   libspectrum = callPackage ../development/libraries/libspectrum { };
 
+  libsphinx = callPackage ../tools/security/libsphinx { };
+
   libspiro = callPackage ../development/libraries/libspiro {};
 
   libspng = callPackage ../development/libraries/libspng { };
