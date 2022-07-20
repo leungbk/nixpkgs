@@ -8217,6 +8217,10 @@ in {
 
   pysnow = callPackage ../development/python-modules/pysnow { };
 
+  pysodium = callPackage ../development/python-modules/pysodium {
+    inherit (pkgs) libsodium;
+  };
+
   pysocks = callPackage ../development/python-modules/pysocks { };
 
   pysolr = callPackage ../development/python-modules/pysolr { };
