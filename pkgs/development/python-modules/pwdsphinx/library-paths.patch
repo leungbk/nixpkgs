@@ -1,0 +1,16 @@
+diff --git a/pwdsphinx/sphinxlib.py b/pwdsphinx/sphinxlib.py
+index b907e57..37c4690 100755
+--- a/pwdsphinx/sphinxlib.py
++++ b/pwdsphinx/sphinxlib.py
+@@ -22,7 +22,7 @@
+ import ctypes
+ import ctypes.util
+ 
+-sphinxlib = ctypes.cdll.LoadLibrary(ctypes.util.find_library('sphinx') or ctypes.util.find_library('libsphinx'))
++sphinxlib = ctypes.cdll.LoadLibrary('@libsphinx@')
+ 
+ if not sphinxlib._name:
+     raise ValueError('Unable to find libsphinx')
+-- 
+2.37.0
+
