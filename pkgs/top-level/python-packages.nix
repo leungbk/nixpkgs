@@ -6117,6 +6117,10 @@ in {
 
   oocsi = callPackage ../development/python-modules/oocsi { };
 
+  opaque = callPackage ../development/python-modules/opaque {
+    inherit (pkgs) libopaque;
+  };
+
   open-garage = callPackage ../development/python-modules/open-garage { };
 
   open-meteo = callPackage ../development/python-modules/open-meteo { };

@@ -1,0 +1,16 @@
+diff --git a/opaque/__init__.py b/opaque/__init__.py
+index cc46863..91ae1c1 100644
+--- a/opaque/__init__.py
++++ b/opaque/__init__.py
+@@ -23,7 +23,7 @@ import ctypes
+ import ctypes.util
+ from ctypes import c_uint16
+ 
+-opaquelib = ctypes.cdll.LoadLibrary(ctypes.util.find_library('opaque') or ctypes.util.find_library('libopaque'))
++opaquelib = ctypes.cdll.LoadLibrary('@libopaque@')
+ 
+ if not opaquelib._name:
+     raise ValueError('Unable to find libopaque')
+-- 
+2.37.0
+
