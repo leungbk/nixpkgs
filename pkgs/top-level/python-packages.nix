@@ -9501,6 +9501,10 @@ in {
 
   rzpipe = callPackage ../development/python-modules/rzpipe { };
 
+  SecureString = callPackage ../development/python-modules/SecureString {
+    inherit (pkgs) openssl;
+  };
+
   s2clientprotocol = callPackage ../development/python-modules/s2clientprotocol { };
 
   s3fs = callPackage ../development/python-modules/s3fs { };
