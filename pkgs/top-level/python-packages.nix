@@ -7055,6 +7055,10 @@ in {
 
   Pweave = callPackage ../development/python-modules/pweave { };
 
+  pwdsphinx = callPackage ../development/python-modules/pwdsphinx {
+    inherit (pkgs) libsphinx;
+  };
+
   pwntools = callPackage ../development/python-modules/pwntools {
     debugger = pkgs.gdb;
   };
