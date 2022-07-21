@@ -9080,6 +9080,10 @@ in {
 
   qrcode = callPackage ../development/python-modules/qrcode { };
 
+  qrcodegen = callPackage ../development/python-modules/qrcodegen {
+    inherit (pkgs) qrcodegen;
+  };
+
   qreactor = callPackage ../development/python-modules/qreactor { };
 
   qscintilla-qt4 = callPackage ../development/python-modules/qscintilla-qt4 { };
