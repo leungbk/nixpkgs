@@ -20338,6 +20338,8 @@ with pkgs;
 
   ode = callPackage ../development/libraries/ode { };
 
+  odftools = callPackage ../tools/text/odftools/default.nix { };
+
   ogre = callPackage ../development/libraries/ogre {};
   ogre1_9 = callPackage ../development/libraries/ogre/1.9.x.nix {};
   ogre1_10 = callPackage ../development/libraries/ogre/1.10.x.nix {};
