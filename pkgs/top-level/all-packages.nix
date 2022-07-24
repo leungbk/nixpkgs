@@ -25693,6 +25693,8 @@ with pkgs;
 
   zilla-slab = callPackage ../data/fonts/zilla-slab { };
 
+  zphinx-zerver = callPackage ../servers/zphinx-zerver { };
+
   zuki-themes = callPackage ../data/themes/zuki { };
 
   ### APPLICATIONS / GIS
