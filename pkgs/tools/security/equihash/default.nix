@@ -31,6 +31,12 @@ stdenv.mkDerivation {
     mkdir -p $out/lib $out/include $out/share/pkgconfig
   '';
 
+  # XXX: this is solely to make this work with zphinx-zerver
+  postInstall = ''
+    cd $out/lib
+    ln -s -T libequihash.so libequihash.so.0
+  '';
+
   buildInputs = [
     libsodium
   ];
