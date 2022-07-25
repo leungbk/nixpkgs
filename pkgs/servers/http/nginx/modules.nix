@@ -171,6 +171,26 @@ in
     };
   };
 
+  http-auth-sasl= {
+    src = fetchFromGitHub {
+      name = "http-auth-sasl";
+      owner = "stef";
+      repo = "ngx_http_auth_sasl_module";
+      rev = "8a1fbfca4fba2e4ba1fcffcc39783f3e9acde94f";
+      sha256 = "sha256-L4RY+BjVMHBDD3U8Kv26OeH3rbLuTq/qGLeUq3FFOo0=";
+    }
+    + "/src"
+    ;
+
+    # sparseCheckout = "src";
+    # sourceRoot = "src";
+
+    inputs = [ pkgs.cyrus_sasl ];
+    preConfigure = ''
+      export NIX_CFLAGS_COMPILE="$NIX_CFLAGS_COMPILE -Wno-error=cast-function-type -Wno-error=unused-variable"
+    '';
+  };
+
   http_proxy_connect_module_v18 = http_proxy_connect_module_generic "proxy_connect_rewrite_1018" // {
     supports = with lib.versions; version: major version == "1" && minor version == "18";
   };
