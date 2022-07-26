@@ -160,8 +160,6 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [ removeReferencesTo ];
 
-  disallowedReferences = map (m: m.src) modules;
-
   postInstall =
     let
       noSourceRefs = lib.concatMapStrings (m: "remove-references-to -t ${m.src} $out/sbin/nginx\n") modules;
